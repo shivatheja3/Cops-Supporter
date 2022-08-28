@@ -1,0 +1,27 @@
+module.exports=[
+    {  
+        name:'Zyx',
+        email:'zyx@gmail.com',   
+        isPolice:1
+        }
+    ,{
+        name:'Yxw',
+        email:'yxw@gmail.com',
+        isPolice:1,
+        }
+    ,{
+        name:'Xwv',
+        email:'Xwv@gmail.com',  
+        isPolice:1,
+        }
+    ,{
+        name:'Uvw',
+        email:'uvwg@gmail.com',  
+        isPolice:1
+        }
+    ,{
+        name:'lmn',
+        email:'lmn@gmail.com',  
+        isPolice:1
+        }
+]

@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= reg["name"] %></h5>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group list-group-flush">
+                    <p class="card-text"><%= reg["email"] %> </p>
+                  </li>
+                  <li class="list-group list-group-flush">
+                    <h1 class="card-text"><%= reg["veh_num"] %> </h1>
+                  </li>
+                  <li class="list-group list-group-flush">
+                    <p class="card-text">Name:<%= reg["address"] %> </p>
+                  </li>
+              </ul>
+          </div>
+    </div>
+</div>
+<h3 class="col-6 offset-3">Complaints registered under your vehcile</h3>
+<div class="row">
+  <div class="col-6 offset-3">
+    <div class="card" width="18rem">
+    <ul>
+      <% for(let i=0;i<reg.complaints.length;i++){ %>
+        <li class="list-group list-group-flush">
+          <img src="<%=reg.complaints[i].image %>" alt="">
+        </li>
+        <li class="list-group list-group-flush">
+          <p><%= reg.complaints[i].location %> </p>
+        </li>
+      <% } %>  
+    </ul>
+  </div>
+  </div>
+</div>
+<a href="/registrations">Go back</a>

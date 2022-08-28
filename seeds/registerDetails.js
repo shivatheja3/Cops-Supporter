@@ -1,0 +1,37 @@
+module.exports=[
+    {
+        veh_num:'AP23AA2345',
+        name:'Abcd',
+        email:'Abcd@gmail.com',
+        address:'vfdsv',
+        complaints:[]
+    }
+    ,{
+        veh_num:'AP23AA3456',
+        name:'bcde',
+        email:'bcde@gmail.com',
+        address:'vfdsdsv',
+        complaints:[]
+    }
+    ,{
+        veh_num:'AP23AA4567',
+        name:'cdef',
+        email:'cdef@gmail.com',
+        address:'vfvfdsdsdsv',
+        complaints:[]
+    }
+    ,{
+        veh_num:'AP23AA5678',
+        name:'defg',
+        email:'defg@gmail.com',
+        address:'vfvcxdsdsv',
+        complaints:[]
+    }
+    ,{
+        veh_num:'AP23AA6789',
+        name:'efgh',
+        email:'efgh@gmail.com',
+        address:'vfvdfdfsdsdsv',
+        complaints:[]
+    }
+]

@@ -1,0 +1,68 @@
+<% layout('layouts/boilerplate') %>
+    <a href="/roadViolations/<%= violation["_id"] %>">Go back</a>
+    <div class="row">
+        <h1 class="text-center">
+            New Complaint
+        </h1>
+        <div class="col-6 offset-3">
+            <form action="/roadViolations/<%= violation["_id"] %>?_method=PUT" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title:</label>
+                    <input class="form-control" type="text" name="title" id="title" required value="<%= violation["title"] %>" readonly>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image Url:</label>
+                    <input class="form-control" type="text" name="image" id="title" required value="<%= violation["image"] %>" readonly>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="Location">Location:</label>
+                    <input class="form-control" type="text" name="location" id="location" required value="<%= violation["location"] %>" readonly>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="Location">Vehcile Number:</label>
+                    <input class="form-control" type="text" name="veh_num" id="veh_num" required value="<%= violation["veh_num"] %>" readonly>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="name">Your name:</label>
+                    <input class="form-control" type="text" name="uploader_name" id="name" required value="<%= violation["uploader_name"] %>" readonly>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-control" type="email" name="uploader_email" id="email" required value="<%= violation["uploader_email"] %> " readonly>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status:</label>
+                    <input type="number" class="form-control" name="statusOfChallan" id="status" required value="<%= violation["statusOfChallan"] %>" readonly>
+                </div>
+                
+                <div class="mb-3">
+                    <% if(violation["statusOfChallan"]==0) {%> 
+                        <button class="btn btn-success">Impose challan</button>
+                    <% }
+                     else {%>
+                        Challan is already imposed
+                    <% } %>   
+                </div>
+            </form>
+            <a href="/roadViolations"><div class="mb-3"><button class="btn btn-primary">Go back</button></a>
+            
+        </div>
+    </div>

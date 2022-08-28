@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate') %> 
+<h1 style="display:inline" class="mb-0">All Registrations</h1>
+ <button type="button" class="btn btn-primary btn-lg mb-2 align-center">
+    Total Registrations <span class="badge bg-secondary"> <%=findYourVehciles.length %></span>
+  </button>
+        <% for(let registration of findYourVehciles){ %>
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <%= registration["veh_num"] %> 
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="card-body">
+                            <%= registration.email %> 
+                        </h5>
+                        <p class="card-text">
+                            <%= registration["name"] %> 
+                        </p>
+                        <a class="btn btn-primary" href="/registrations/<%= registration["_id"] %> ">View</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>

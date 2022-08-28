@@ -1,0 +1,27 @@
+ <% layout('layouts/boilerplate') %> 
+ <h1 style="display:inline" class="mb-0">All Violations</h1>
+ <button type="button" class="btn btn-primary btn-lg mb-2 align-center">
+    Total Complaints <span class="badge bg-secondary"> <%=violations.length %></span>
+  </button>
+        <% for(let violation of violations){ %>
+            
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="<%=violation['image']%>" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="card-body">
+                            <%= violation.title %> 
+                        </h5>
+                        <p class="card-text">
+                            <%= violation["location"] %> 
+                        </p>
+                        <a class="btn btn-primary" href="/roadViolations/<%= violation["_id"] %> ">View <%= violation["title"] %> </a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+                
+
+    
